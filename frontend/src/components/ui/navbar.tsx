@@ -1,8 +1,10 @@
+//used https://flowbite.com/docs/components/navbar/ as a starting point
+
 import calcifer from "../../assets/calcifer.png";
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 bg-black text-white shadow-md z-50">
+    <nav className="sticky top-0 bg-stone-900 text-white shadow-md z-50">
       <div className="max-w-7xl px-8 py-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -18,7 +20,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-gray-400 transition-colors">
+            <a href="#aboutMe" className="hover:text-gray-400 transition-colors">
               About Me
             </a>
           </li>

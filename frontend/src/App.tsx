@@ -1,7 +1,12 @@
 import castle from './assets/howlsMovingCastle.jpg';
+import Soot from './assets/soot.png';
 import './App.css';
-import Navbar from './components/ui/navbar';
-import ProfileCarousel from './components/ui/profileCarousel';
+import Navbar from './components/ui/Navbar';
+import ProfileCarousel from './components/ui/ProfileCarousel';
+import Socials from './components/ui/socials';
+import AboutCard from './components/ui/cards/AboutCard';
+
+
 
 function App() {
   return (
@@ -10,27 +15,41 @@ function App() {
       
       {/*Background */}
       <div
-        className="fixed top-0 left-0 w-full h-full bg-no-repeat bg-cover bg-center "
+        className="fixed w-full h-full bg-cover bg-center "
         style={{ backgroundImage: `url(${castle})` }}
       />
       
 
       {/* Scrollable content */}
-      <div className="relative pl-16 pr-16" >
-        <div className="min-h-screen w-full flex">
+      <div className="relative pl-8 pr-8" >
+        <div className="min-h-screen w-full flex ">
           {/* Left side */}
-          <div className="flex-1 flex items-center justify-center ">
-            <h1 className="text-9xl font-bold text-white">hi i'm patrick</h1>
+          <div className="flex-1 flex items-center justify-center pr-32">
+            <div>
+              <h1 className="text-9xl font-bold text-white pb-11">hello,👋</h1>
+              <h1 className="text-9xl font-bold text-white">i'm patrick</h1>
+              <div className='mt-16 ml-16'>
+                <Socials />
+              </div>
+              
+            </div>
+            
           </div>
 
           {/* Right side */}
-          <div className="flex-1 flex items-center justify-center  ">
+          <div className="p-16">
             <ProfileCarousel />
           </div>
       </div>
 
-        <div className="min-h-1/2 flex items-center justify-center" id='aboutMe'>
-          <h1 className="text-9xl font-bold text-white">About Me</h1>
+        <div className="min-h-1/3 flex items-center justify-center" id='aboutMe'>
+           <img className="w-1/8 h-1/8" src={Soot} alt="Soot Sprite"/>
+        </div>
+
+        <AboutCard />
+
+        <div className="min-h-1/2 flex items-center justify-center pb-16" id='education'>
+
         </div>
 
       </div>
