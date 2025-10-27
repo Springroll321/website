@@ -13,7 +13,7 @@ interface CarouselProps {
 function Carousel({
   images,
   autoPlayInterval = 3000,
-  sizeClass = "w-[35vw] h-[60vh] md:w-[28vw] md:h-[80vh]",
+  sizeClass = "w-[240px] h-[320px]",
   showIndicators = true,
   showButtons = true,
   indicatorActiveColor = "bg-orange-100",

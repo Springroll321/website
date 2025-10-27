@@ -39,7 +39,7 @@ const sizeClass = "min-w-[30vw] h-[50vh]";
 
 function AboutCard() {
   return (
-    <Card backgroundClassName="bg-orange-100/75">
+    <Card backgroundClassName="bg-orange-100/75 hover:bg-orange-100">
       <Card.Header className="text-6xl font-bold text-yellow-950 p-4 flex justify-center">
         About Me
       </Card.Header>

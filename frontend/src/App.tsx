@@ -1,11 +1,12 @@
 import castle from './assets/howlsMovingCastle.jpg';
-import Soot from './assets/soot.png';
+import soot from './assets/soot.png';
+import totoro from './assets/totoro.png';
 import './App.css';
 import Navbar from './components/ui/Navbar';
 import ProfileCarousel from './components/ui/ProfileCarousel';
 import Socials from './components/ui/socials';
 import AboutCard from './components/ui/cards/AboutCard';
-
+import EducationCard from './components/ui/cards/EducationCard';
 
 
 function App() {
@@ -42,15 +43,13 @@ function App() {
           </div>
       </div>
 
-        <div className="min-h-1/3 flex items-center justify-center" id='aboutMe'>
-           <img className="w-1/8 h-1/8" src={Soot} alt="Soot Sprite"/>
+        <div className="min-h-1/3 flex items-center justify-center" id="aboutMe">
+           <img className="w-1/8 h-1/8" src={soot} alt="Soot Sprite"/>
         </div>
 
         <AboutCard />
-
-        <div className="min-h-1/2 flex items-center justify-center pb-16" id='education'>
-
-        </div>
+        <EducationCard />
+        
 
       </div>
     </div>

@@ -25,7 +25,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-gray-400 transition-colors">
+            <a href="#education" className="hover:text-gray-400 transition-colors">
               Education
             </a>
           </li>
