@@ -40,7 +40,7 @@ function Carousel({
   return (
     <div className={`relative overflow-hidden ${sizeClass}`}>
       {/* Slides */}
-      <div className="relative w-full h-full items-center justify-center">
+      <div className="relative w-full h-full items-center justify-center select-none">
         {images.map((src, index) => (
           <div
             key={index}
