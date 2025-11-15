@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine@sha256:6c2742bbb86d0992fe13e5a9b2fa7e86e6c330b56c0652e4a1e3a1d8c1d7e9f0
+FROM node:20-alpine
 
 WORKDIR /app
 
