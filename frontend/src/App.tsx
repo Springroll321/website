@@ -1,6 +1,6 @@
 import castle from './assets/howlsMovingCastle.jpg';
 import soot from './assets/soot.png';
-import noFace from './assets/noFace.png';
+import noFace from './assets/noface.png';
 import './App.css';
 import Navbar from './components/ui/Navbar';
 import ProfileCarousel from './components/ui/ProfileCarousel';

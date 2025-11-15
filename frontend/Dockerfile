@@ -1,23 +1,25 @@
-# multi-stage build for a Vite + React TypeScript app
-FROM node:18-alpine AS builder
+# Build stage
+FROM node:20-alpine@sha256:6c2742bbb86d0992fe13e5a9b2fa7e86e6c330b56c0652e4a1e3a1d8c1d7e9f0
+
 WORKDIR /app
 
-# install dependencies (use package-lock if present)
-COPY package.json package-lock.json* ./
-RUN sh -c "npm ci --silent || npm install --silent"
+# Copy only package files first (better caching)
+COPY package*.json ./
 
-# copy source and build
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the project
 COPY . .
+
+# Build the production app
 RUN npm run build
 
-# production image
-FROM nginx:stable-alpine
-# copy built assets
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Set environment variables
+ENV PORT=80
 
-# use custom nginx config for SPA fallback (see nginx.conf below)
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
+# Expose the port
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+
+# Start the production server (vite preview)
+CMD ["npm", "start"]
