@@ -4,7 +4,7 @@ import noFace from './assets/noface.png';
 import './App.css';
 import Navbar from './components/ui/Navbar';
 import ProfileCarousel from './components/ui/ProfileCarousel';
-import Socials from './components/ui/socials';
+import Socials from './components/ui/Socials';
 import AboutCard from './components/ui/cards/AboutCard';
 import EducationCard from './components/ui/cards/EducationCard';
 import ProjectCard from './components/ui/cards/ProjectCard';
