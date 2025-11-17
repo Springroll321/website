@@ -1,25 +1,13 @@
-# Build stage
-FROM node:20-alpine
-
+# Stage 1: Build
+FROM node:20-alpine AS builder
 WORKDIR /app
-
-# Copy only package files first (better caching)
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy the rest of the project
 COPY . .
-
-# Build the production app
 RUN npm run build
 
-# Set environment variables
-ENV PORT=80
-
-# Expose the port
+# Stage 2: Serve with Nginx
+FROM nginx:stable-alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
-
-# Start the production server (vite preview)
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]
