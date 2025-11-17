@@ -1,0 +1,4 @@
+patricktech.site {
+    root * /usr/share/caddy
+    file_server
+}
