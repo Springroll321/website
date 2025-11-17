@@ -12,7 +12,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve with Caddy
-FROM caddy:caddy:latest
+FROM caddy:latest
 
 # Copy the production build from the previous stage
 COPY --from=builder /app/dist /usr/share/caddy
