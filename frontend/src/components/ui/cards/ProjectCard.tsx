@@ -12,7 +12,7 @@ const Projects = [
     image: site,
     title: "Portfolio Website",
     description: "Personal portfolio website to showcase my projects, skills and background.",
-    technologies: ["TypeScript","Docker","React", "AWS", "TailwindCSS"],
+    technologies: ["TypeScript","Docker","React", "Google Cloud", "TailwindCSS", "Vite"],
   },
   {
     image: magicBudget,
